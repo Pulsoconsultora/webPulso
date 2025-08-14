@@ -1,1 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Lexend+Deca:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Lexend+Deca:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-alata: "Alata", sans-serif;
+
+  --font-open: "Open Sans", sans-serif;
+
+  --color-white-50: #ffffff;
+--color-white-100: #efefef;
+--color-white-200: #dcdcdc;
+--color-white-300: #bdbdbd;
+--color-white-400: #989898;
+--color-white-500: #7c7c7c;
+--color-white-600: #656565;
+--color-white-700: #525252;
+--color-white-800: #464646;
+--color-white-900: #3d3d3d;
+--color-white-950: #292929;
+
+
+
+  --color-madison-50: #eaf9ff;
+  --color-madison-100: #cff2ff;
+  --color-madison-200: #aaebff;
+  --color-madison-300: #6fe1ff;
+  --color-madison-400: #2cccff;
+  --color-madison-500: #00a8ff;
+  --color-madison-600: #007fff;
+  --color-madison-700: #0065ff;
+  --color-madison-800: #0054e0;
+  --color-madison-900: #004caf;
+  --color-madison-950: #022859;
+
+  --color-burning-orange-50: #fff4ed;
+  --color-burning-orange-100: #ffe5d4;
+  --color-burning-orange-200: #ffc7a8;
+  --color-burning-orange-300: #ffa071;
+  --color-burning-orange-400: #ff6b35;
+  --color-burning-orange-500: #fe4711;
+  --color-burning-orange-600: #ef2d07;
+  --color-burning-orange-700: #c61c08;
+  --color-burning-orange-800: #9d190f;
+  --color-burning-orange-900: #7e1810;
+  --color-burning-orange-950: #440806;
+}

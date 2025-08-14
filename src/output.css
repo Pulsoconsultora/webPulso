@@ -1,4 +1,6 @@
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Lexend+Deca:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Lexend+Deca:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap");
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7,6 +9,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -19,10 +23,18 @@
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-open: "Open Sans", sans-serif;
+    --color-white-50: #ffffff;
+    --color-white-100: #efefef;
+    --color-white-500: #7c7c7c;
+    --color-white-950: #292929;
+    --color-madison-900: #004caf;
+    --color-madison-950: #022859;
   }
 }
 @layer base {
@@ -308,6 +320,9 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -318,8 +333,38 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
+  .bg-madison-900 {
+    background-color: var(--color-madison-900);
+  }
+  .bg-madison-950 {
+    background-color: var(--color-madison-950);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-white-50 {
+    background-color: var(--color-white-50);
+  }
+  .bg-white-50\/10 {
+    background-color: color-mix(in srgb, #ffffff 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white-50) 10%, transparent);
+    }
+  }
+  .bg-white-100 {
+    background-color: var(--color-white-100);
+  }
+  .bg-white-500 {
+    background-color: var(--color-white-500);
+  }
+  .bg-white-500\/10 {
+    background-color: color-mix(in srgb, #7c7c7c 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white-500) 10%, transparent);
+    }
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -339,6 +384,9 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -347,6 +395,9 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .font-open {
+    font-family: var(--font-open);
   }
   .text-base {
     font-size: var(--text-base);
@@ -364,6 +415,10 @@
     font-size: var(--text-sm);
     line-height: calc(var(--spacing) * 6);
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -373,6 +428,15 @@
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .text-white-50 {
+    color: var(--color-white-50);
+  }
+  .text-white-950 {
+    color: var(--color-white-950);
   }
   .underline {
     text-decoration-line: underline;
@@ -386,6 +450,13 @@
       background-color: transparent;
     }
   }
+  .hover\:bg-blue-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
+  }
   .hover\:bg-gray-50 {
     &:hover {
       @media (hover: hover) {
@@ -393,15 +464,52 @@
       }
     }
   }
+  .hover\:bg-madison-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-madison-900);
+      }
+    }
+  }
+  .hover\:bg-madison-950 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-madison-950);
+      }
+    }
+  }
+  .hover\:bg-white-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white-50);
+      }
+    }
+  }
+  .hover\:bg-white-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white-100);
+      }
+    }
+  }
+  .hover\:bg-white-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white-500);
+      }
+    }
+  }
+  .hover\:text-madison-950 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-madison-950);
+      }
+    }
+  }
   .focus\:outline-none {
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
-    }
-  }
-  .sm\:h-4 {
-    @media (width >= 40rem) {
-      height: calc(var(--spacing) * 4);
     }
   }
   .sm\:h-8 {
@@ -428,11 +536,6 @@
       }
     }
   }
-  .md\:h-6 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 6);
-    }
-  }
   .md\:h-8 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 8);
@@ -446,11 +549,6 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
-    }
-  }
-  .lg\:h-8 {
-    @media (width >= 64rem) {
-      height: calc(var(--spacing) * 8);
     }
   }
   .lg\:h-10 {
