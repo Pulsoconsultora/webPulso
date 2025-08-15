@@ -82,154 +82,207 @@
   <body>
     <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-    <div class="bg-white">
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav
-          aria-label="Global"
-          class="flex items-center justify-between p-6 lg:px-8"
-        >
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Pulso</span>
-              <img
-                src="images/logo1.png"
-                alt=""
-                class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
+    <header class="relative inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-4 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Pulso</span>
+            <img
+              src="images/logo1.png"
+              alt=""
+              class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              command="show-modal"
-              commandfor="mobile-menu"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            </svg>
+          </button>
+        </div>
+        <div class="hidden font-open lg:flex lg:gap-x-12">
+          <a
+            href="#Inicio"
+            class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
+            >Inicio</a
+          >
+          <a
+            href="#Servicios"
+            class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
+            >Servicios</a
+          >
+          <a
+            href="#Sobrenosotros"
+            class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
+            >Sobre nosotros</a
+          >
+          <a
+            href="#Contacto"
+            class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
+            >Contacto</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="#Contacto"
+            class="bg-madison-900 hover:bg-madison-950 text-white-50 font-open font-bold py-2 px-4 rounded-md"
+            >Hablemos
+          </a>
+        </div>
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
             >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                data-slot="icon"
-                aria-hidden="true"
-                class="size-6"
-              >
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden font-open lg:flex lg:gap-x-12">
-            <a
-              href="#Inicio"
-              class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
-              >Inicio</a
-            >
-            <a
-              href="#Servicios"
-              class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
-              >Servicios</a
-            >
-            <a
-              href="#Sobrenosotros"
-              class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
-              >Sobre nosotros</a
-            >
-            <a
-              href="#Contacto"
-              class="text-sm/6 hover:text-madison-950 font-semibold text-white-950"
-              >Contacto</a
-            >
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#Contacto"
-              class="bg-madison-900 hover:bg-madison-950 text-white-50 font-open font-bold py-2 px-4 rounded-md"
-              >Hablemos
-            </a>
-          </div>
-        </nav>
-        <el-dialog>
-          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-            <div tabindex="0" class="fixed inset-0 focus:outline-none">
-              <el-dialog-panel
-                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-              >
-                <div class="flex items-center justify-between">
-                  <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Pulso</span>
-                    <img
-                      src="images/logo1.png"
-                      alt=""
-                      class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
-                    />
-                  </a>
-                  <button
-                    type="button"
-                    command="close"
-                    commandfor="mobile-menu"
-                    class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Pulso</span>
+                  <img
+                    src="images/logo1.png"
+                    alt=""
+                    class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
+                  />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
                   >
-                    <span class="sr-only">Close menu</span>
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="size-6"
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6">
+                  <div class="font-open space-y-2 py-6">
+                    <a
+                      href="#Inicio"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      >Inicio</a
                     >
-                      <path
-                        d="M6 18 18 6M6 6l12 12"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div class="mt-6 flow-root">
-                  <div class="-my-6">
-                    <div class="font-open space-y-2 py-6">
-                      <a
-                        href="#Inicio"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
-                        >Inicio</a
-                      >
-                      <a
-                        href="#Servicios"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
-                        >Servicios</a
-                      >
-                      <a
-                        href="#Sobrenosotros"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
-                        >Sobre nosotros</a
-                      >
-                      <a
-                        href="#Contacto"
-                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
-                        >Contacto</a
-                      >
-                    </div>
-                    <div class="py-6">
-                      <a
-                        href="#Contacto"
-                        class="bg-madison-900 hover:bg-madison-950 text-white-50 font-open font-bold py-2 px-4 rounded-md"
-                        >Hablemos</a
-                      >
-                    </div>
+                    <a
+                      href="#Servicios"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      >Servicios</a
+                    >
+                    <a
+                      href="#Sobrenosotros"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      >Sobre nosotros</a
+                    >
+                    <a
+                      href="#Contacto"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      >Contacto</a
+                    >
+                  </div>
+                  <div class="py-6">
+                    <a
+                      href="#Contacto"
+                      class="bg-madison-900 hover:bg-madison-950 text-white-50 font-open font-bold py-2 px-4 rounded-md"
+                      >Hablemos</a
+                    >
                   </div>
                 </div>
-              </el-dialog-panel>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <main class="relative isolate">
+      <img
+        src="images/30.png"
+        class="absolute inset-0 w-full h-full object-cover"
+        alt="Hero image"
+      />
+      
+      <!-- Inicio Section -->
+      <section id="Inicio" class="relative isolate" aria-label="Inicio">
+        <div class="mx-auto max-w-2xl py-32 sm:py-48">
+          <div class="text-center font-open">
+            <h1
+              class="text-5xl font-semibold font-alata tracking-tight text-balance text-white-50 sm:text-7xl"
+            >
+              Optimizamos tu gestion laboral para crecer
+            </h1>
+            <p
+              class="m-8 text-lg font-medium text-pretty text-white-200 sm:text-xl/8"
+            >
+              En Pulso, somos expertos en relaciones laborales y gestión humana.
+              Te acompañamos para mejorar la organización de tu empresa y
+              asegurar un entorno laboral eficiente.
+            </p>
+            <div
+              class="m-10 flex flex-col sm:flex-row gap-y-2 items-center justify-center gap-x-6"
+            >
+              <a
+                href="#Contacto"
+                class="rounded-md h-12 w-full sm:w-auto bg-burning-orange-700 px-5 py-3.5 text-sm font-semibold text-white-50 shadow-xs hover:bg-burning-orange-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burning-orange-600"
+                >Agenda tu consulta</a
+              >
+              <a
+                href="#Servicios"
+                class="h-12 border w-full justify-center sm:w-auto border-burning-orange-700 rounded-md px-5 py-3.5 text-white-50 font-semibold hover:border-burning-orange-600 stroke-2 text-sm flex gap-2 items-center"
+                >Servicios<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
             </div>
-          </dialog>
-        </el-dialog>
-      </header>
-    </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>
