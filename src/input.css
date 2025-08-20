@@ -8,18 +8,16 @@
   --font-open: "Open Sans", sans-serif;
 
   --color-white-50: #ffffff;
---color-white-100: #efefef;
---color-white-200: #dcdcdc;
---color-white-300: #bdbdbd;
---color-white-400: #989898;
---color-white-500: #7c7c7c;
---color-white-600: #656565;
---color-white-700: #525252;
---color-white-800: #464646;
---color-white-900: #3d3d3d;
---color-white-950: #292929;
-
-
+  --color-white-100: #efefef;
+  --color-white-200: #dcdcdc;
+  --color-white-300: #bdbdbd;
+  --color-white-400: #989898;
+  --color-white-500: #7c7c7c;
+  --color-white-600: #656565;
+  --color-white-700: #525252;
+  --color-white-800: #464646;
+  --color-white-900: #3d3d3d;
+  --color-white-950: #292929;
 
   --color-madison-50: #eaf9ff;
   --color-madison-100: #cff2ff;
