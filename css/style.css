@@ -1,0 +1,57 @@
+.glass-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-out,
+    opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.accordion-content.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.service-card-container {
+  transition: all 0.3s ease-out;
+}
+#expandableContent.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent2.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent3.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent4.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent5.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent6.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent7.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent8.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent9.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
+#expandableContent10.expanded {
+  max-height: 1200px; /* o la altura que necesites */
+}
