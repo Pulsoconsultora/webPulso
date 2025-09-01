@@ -250,23 +250,83 @@
                 </button>
               </div>
               <div class="mt-6 flow-root">
-                <div class="-">
-                  <div class="font-open space-y-2 py-6">
+                <div>
+                  <div class="font-open flex flex-col space-y-2 py-6">
                     <a
                       href="#Inicio"
-                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      class="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
                       >Inicio</a
                     >
-                    <a
-                      href="#Servicios"
-                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
-                      >Servicios</a
-                    >
-                    <a
-                      href="#Sobrenosotros"
-                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
-                      >Sobre nosotros</a
-                    >
+                    <!-- Servicios Dropdown -->
+                    <el-dropdown class="flex">
+                      <button
+                        class="-mx-3 flex items-center gap-2 rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      >
+                        Servicios
+                        <svg
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          data-slot="icon"
+                          aria-hidden="true"
+                          class="-mr-1 size-5 text-white-400"
+                        >
+                          <path
+                            d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+
+                      <el-menu
+                        anchor="bottom end"
+                        popover
+                        class="w-56 bg-white-50"
+                      >
+                        <div class="py-1">
+                          <a
+                            href="servicios.html"
+                            class="text-sm/6 hover:text-madison-950 rounded-lg font-normal text-white-900 block px-4 py-2 focus:bg-white-100 focus:text-white-950 focus:outline-hidden"
+                            >Más información</a
+                          >
+                        </div>
+                      </el-menu>
+                    </el-dropdown>
+                    <!-- Sobre Nosotros Dropdown -->
+                    <el-dropdown class="flex">
+                      <button
+                        class="-mx-3 flex items-center gap-2 rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
+                      >
+                        Sobre nosotros
+                        <svg
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          data-slot="icon"
+                          aria-hidden="true"
+                          class="-mr-1 size-5 text-white-400"
+                        >
+                          <path
+                            d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+
+                      <el-menu
+                        anchor="bottom end"
+                        popover
+                        class="w-56 bg-white-50"
+                      >
+                        <div class="py-1">
+                          <a
+                            href="sobrenosotros.html"
+                            class="text-sm/6 rounded-lg hover:text-madison-950 font-normal text-white-900 block px-4 py-2 focus:bg-white-100 focus:text-white-950 focus:outline-hidden"
+                            >Más información</a
+                          >
+                        </div>
+                      </el-menu>
+                    </el-dropdown>
                     <a
                       href="#Contacto"
                       class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-950 hover:bg-white-100"
@@ -275,7 +335,7 @@
                   </div>
                   <div class="py-6">
                     <a
-                      href="#Contacto"
+                      href="https://wa.me/+598099883993"
                       class="bg-madison-900 hover:bg-madison-950 text-white-50 font-open font-bold py-2 px-4 rounded-md"
                       >Hablemos</a
                     >
