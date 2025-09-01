@@ -15,6 +15,7 @@
     --spacing: 0.25rem;
     --container-sm: 24rem;
     --container-md: 28rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -394,15 +395,6 @@
   .h-80 {
     height: calc(var(--spacing) * 80);
   }
-  .h-130 {
-    height: calc(var(--spacing) * 130);
-  }
-  .h-160 {
-    height: calc(var(--spacing) * 160);
-  }
-  .h-170 {
-    height: calc(var(--spacing) * 170);
-  }
   .h-200 {
     height: calc(var(--spacing) * 200);
   }
@@ -456,6 +448,9 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
   }
   .max-w-md {
     max-width: var(--container-md);
