@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Mensaje Enviado! - Gracias por contactarnos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="refresh" content="5;url=/">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+        <!-- Icono de éxito -->
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">¡Mensaje Enviado!</h1>
+
+        <div class="bg-green-50 border border-green-200 rounded-md p-4 mb-6">
+            <p class="text-green-800 text-sm">
+                ✅ Tu mensaje ha sido enviado correctamente
+            </p>
+        </div>
+
+        <div class="text-gray-600 space-y-3 mb-6">
+            <p class="text-lg">¡Gracias por contactarnos!</p>
+            <p class="text-sm">
+                Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.
+            </p>
+            <p class="text-sm">
+                <strong>Tiempo de respuesta estimado:</strong> 24-48 horas
+            </p>
+        </div>
+
+        <div class="space-y-3">
+            <a href="/"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Volver al Inicio
+            </a>
+
+            <p class="text-xs text-gray-500">
+                Serás redirigido automáticamente en <span id="countdown">5</span> segundos
+            </p>
+        </div>
+
+        <!-- Información de contacto adicional -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <h3 class="text-sm font-semibold text-gray-700 mb-2">¿Necesitas ayuda inmediata?</h3>
+            <div class="text-xs text-gray-600 space-y-1">
+                <p>📧 Email: contacto@tuempresa.com</p>
+                <p>📞 Teléfono: +1 234 567 8900</p>
+                <p>🕒 Horario: Lun-Vie 9:00-18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/gra.js"></script>
+</body>
+
+</html>
