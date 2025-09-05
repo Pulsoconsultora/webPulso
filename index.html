@@ -4,7 +4,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="src/output.css" rel="stylesheet" />
+  <!-- Preconexión para acelerar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Unifica todas las familias en UNA sola URL -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- Preload de la fuente principal usada en LCP -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font"
+    type="font/woff2" crossorigin>
+
+
+
+  <!-- CSS CRITICO -------------------------->
+  <!-- <style>
+    /* Estilos críticos para el LCP */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .btn-primary {
+      background-color: #3b82f6;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+    }
+  </style> -->
+  <!-- ---------------------------------- -->
+
+  <!-- CSS no crítico (Tailwind completo, cargado diferido) -->
+  <link rel="preload" href="/src/output.css" as="style">
+  <link rel="stylesheet" href="/src/output.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="/src/output.css">
+  </noscript>
 
   <!-- Título SEO (50-60 caracteres) -->
   <title>Consultora Pulso - Consultoría Empresarial y Estratégica</title>
@@ -198,7 +255,8 @@
   <main class="relative isolate font-open">
     <!-- Inicio Section -->
     <section id="Inicio" class="relative isolate min-h-[500px] flex items-center justify-center" aria-label="Inicio">
-      <img src="images/heroImage.avif" class="absolute inset-0 w-full h-full object-cover z-0" alt="Hero image" />
+      <img src="images/heroImage.avif" fetchpriority=high class="absolute inset-0 w-full h-full object-cover z-0"
+        alt="Hero image" />
       <div class="absolute inset-0 bg-madison-900/60 z-10"></div>
       <div class="relative z-20 mx-auto max-w-2xl py-32 sm:py-48">
         <div class="text-center font-open">
@@ -781,7 +839,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" rel="preconnect" type="module"></script>
 </body>
 
 </html>
