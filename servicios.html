@@ -76,7 +76,7 @@
   <meta property="og:title" content="Consultora Pulso - Consultoría Empresarial y Estratégica" />
   <meta property="og:description" content="Descubre soluciones adaptadas a tus necesidades empresariales con
         nuestros servicios especializados y personalizados." />
-  <meta property="og:image" content="https://www.pulsoconsultora.com.uy/images/logo1.avif" />
+  <meta property="og:image" content="https://www.pulsoconsultora.com.uy/images/logo1.svg" />
   <meta property="og:url" content="https://www.pulsoconsultora.com.uy/servicios" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
@@ -85,7 +85,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Nuestros Servicios | Consultora Pulso" />
   <meta name="twitter:description" content="Servicios de consultoría empresarial y estrategia comercial" />
-  <meta name="twitter:image" content="https://www.pulsoconsultora.com.uy/images/logo1.avif" />
+  <meta name="twitter:image" content="https://www.pulsoconsultora.com.uy/images/logo1.svg" />
 
   <!-- Meta adicionales -->
   <meta name="author" content="Consultora Pulso" />
@@ -96,10 +96,25 @@
   <link rel="canonical" href="https://www.pulsoconsultora.com.uy/servicios" />
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.avif" />
-  <link rel="icon" type="image/avif" sizes="32x32" href="images/favicon-32x32.avif" />
-  <link rel="icon" type="image/avif" sizes="16x16" href="images/favicon-16x16.avif" />
-  <link rel="manifest" href="images/site.webmanifest" />
+  <!-- Favicon clásico -->
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+
+  <!-- PNG en varios tamaños -->
+  <link rel="icon" type="image/avif" sizes="16x16" href="images/favicon-16x16.avif">
+  <link rel="icon" type="image/avif" sizes="32x32" href="images/favicon-32x32.avif">
+  <link rel="icon" type="image/avif" sizes="48x48" href="images/favicon-48x48.avif">
+  <link rel="icon" type="image/avif" sizes="192x192" href="images/android-chrome-192x192.avif">
+  <link rel="icon" type="image/avif" sizes="512x512" href="images/android-chrome-512x512.avif">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.avif">
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- Color de la barra en móviles -->
+  <meta name="theme-color" content="#0A3D62">
+
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -110,8 +125,8 @@
       <div class="flex lg:flex-1">
         <a href="index.html" class="-m-1.5 p-1.5">
           <span class="sr-only">Pulso</span>
-          <img src="images/logo1.avif" alt="" class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto" />
-        </a>
+          <img src="images/logo1.svg" alt="logo Pulso Consultora" class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
+            loading="eager" /> </a>
       </div>
       <div class="flex lg:hidden">
         <!-- ...existing mobile menu button... -->
@@ -181,8 +196,8 @@
             <div class="flex items-center justify-between">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Pulso</span>
-                <img src="images/logo1.avif" alt="" class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto" />
-              </a>
+                <img src="images/logo1.svg" alt="logo Pulso Consultora" class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
+                  loading="eager" /> </a>
               <button type="button" command="close" commandfor="mobile-menu"
                 class="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Close menu</span>
@@ -877,7 +892,8 @@
         <!-- Company Info -->
         <div class="lg:col-span-1">
           <div class="flex items-center mb-4">
-            <img src="images/logo1.avif" alt="Pulso Consultora Logo" class="h-10 w-auto" />
+            <img src="images/logo1.svg" alt="logo Pulso Consultora" class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
+              loading="eager" />
           </div>
           <p class="text-white-700 text-sm leading-relaxed mb-6">
             Optimizamos tu gestión laboral para hacer crecer tu empresa de
