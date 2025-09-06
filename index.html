@@ -9,32 +9,32 @@
 
   <!-- 🔹 Preconnect a orígenes externos -->
   <!-- Preconexión al servidor de Google fonts para acelerar -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- Preconexión al servidor de jsdelivr -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
   <!-- 🔹 Fuentes: preload + carga optimizada -->
   <!-- Preload del CSS de Google Fonts +++ -->
   <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@400;600&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@400;600&display=swap" />
   <!-- Carga no bloqueante o diferida del CSS de fuentes +++ -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@400;600&display=swap" media="print"
-    onload="this.media='all'">
+    onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@400;600&display=swap">
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@400;600&display=swap" />
   </noscript>
 
   <!-- 🔹 Preload de la fuente crítica (Alata usada en H1/LCP) -->
   <link rel="preload" href="https://fonts.gstatic.com/s/alata/v17/PbytFmztEwbIofe6xHU.woff2" as="font" type="font/woff2"
-    crossorigin>
+    crossorigin />
 
   <!-- 🔹 Tailwind (output.css optimizado con purge) -->
   <!-- Carga el CSS de Tailwind como crítico (bloqueante normal)+++ -->
-  <link rel="preload" href="src/output.css" as="style">
-  <link rel="stylesheet" href="src/output.css">
+  <link rel="preload" href="src/output.css" as="style" />
+  <link rel="stylesheet" href="src/output.css" />
 
   <!-- 🔹 Tailwind Elements (JS diferido para no bloquear render) -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwind-elements/core@1.0.0/dist/js/index.min.js" defer></script>
@@ -111,24 +111,23 @@
 
   <!-- Favicon -->
   <!-- Favicon clásico -->
-  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
 
   <!-- PNG en varios tamaños -->
-  <link rel="icon" type="image/avif" sizes="16x16" href="images/favicon-16x16.avif">
-  <link rel="icon" type="image/avif" sizes="32x32" href="images/favicon-32x32.avif">
-  <link rel="icon" type="image/avif" sizes="48x48" href="images/favicon-48x48.avif">
-  <link rel="icon" type="image/avif" sizes="192x192" href="images/android-chrome-192x192.avif">
-  <link rel="icon" type="image/avif" sizes="512x512" href="images/android-chrome-512x512.avif">
+  <link rel="icon" type="image/avif" sizes="16x16" href="images/favicon-16x16.avif" />
+  <link rel="icon" type="image/avif" sizes="32x32" href="images/favicon-32x32.avif" />
+  <link rel="icon" type="image/avif" sizes="48x48" href="images/favicon-48x48.avif" />
+  <link rel="icon" type="image/avif" sizes="192x192" href="images/android-chrome-192x192.avif" />
+  <link rel="icon" type="image/avif" sizes="512x512" href="images/android-chrome-512x512.avif" />
 
   <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.avif">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.avif" />
 
   <!-- Manifest PWA -->
-  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="manifest" href="images/site.webmanifest" />
 
   <!-- Color de la barra en móviles -->
-  <meta name="theme-color" content="#0A3D62">
-
+  <meta name="theme-color" content="#0A3D62" />
 </head>
 
 <body>
@@ -210,7 +209,8 @@
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Pulso</span>
                 <img src="images/logo1.svg" alt="logo Pulso Consultora" class="h-8 sm:h-8 md:h-8 lg:h-10 xl:h-10 w-auto"
-                  loading="eager" /> </a>
+                  loading="eager" />
+              </a>
               <button type="button" command="close" commandfor="mobile-menu"
                 class="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Close menu</span>
@@ -285,14 +285,13 @@
     <!-- Inicio Section -->
     <section id="Inicio" class="relative isolate min-h-[500px] flex items-center justify-center" aria-label="Inicio">
       <img src="images/heroImage-1200.avif" srcset="
-    images/heroImage-400.avif 400w,
-    images/heroImage-800.avif 800w,
-    images/heroImage-1200.avif 1200w,
-    images/heroImage-1600.avif 1600w
-  " sizes="(max-width: 768px) 100vw,
+            images/heroImage-400.avif   400w,
+            images/heroImage-800.avif   800w,
+            images/heroImage-1200.avif 1200w,
+            images/heroImage-1600.avif 1600w
+          " sizes="(max-width: 768px) 100vw,
          (max-width: 1200px) 100vw,
-         1200px" alt="Hero" fetchpriority=high class="absolute w-full h-full object-cover z-0 inset-0"
-        alt="Hero image" />
+         100vw" fetchpriority="high" class="absolute w-full h-full object-cover z-0 inset-0" alt="Hero image" />
 
       <div class="absolute inset-0 bg-madison-900/60 z-10"></div>
       <div class="relative z-20 mx-auto max-w-2xl py-32 sm:py-48">
@@ -396,7 +395,6 @@
                 </p>
               </div>
             </div>
-
           </article>
           <article class="bg-white-100 flex flex-col gap-5 p-6 rounded-xl border border-white-100">
             <div class="flex flex-col gap-5">
@@ -487,13 +485,12 @@
             </svg>
           </a>
         </div>
-        <img src="images/beneImage.avif" srcset="
-    images/beneImage.avif 400w,
-    images/beneImage.avif 800w,
-    images/beneImage.avif 1200w
-  " sizes="(max-width: 768px) 100vw, 600px" alt="Beneficios" loading="lazy"
-          class="w-full rounded-xl max-w-[600px] h-auto object-cover" />
 
+        <img src="images/beneImage-600.avif" srcset="
+    images/beneImage-372.avif 372w,
+    images/beneImage-600.avif 600w
+  " sizes="(max-width: 768px) 372px, 600px" class="w-full rounded-xl max-w-170 h-auto object-cover" alt="Beneficios"
+          loading="lazy" />
 
       </div>
     </section>
@@ -515,10 +512,16 @@
 
         <div class="flex lg:flex-row gap-12 flex-col">
           <article class="flex flex-col gap-6 lg:gap-8">
-            <img src="images/asesorImage.avif" class="w-170 h-auto rounded-xl" alt="Asesoramiento Laboral" />
+            <img src="images/asesorImage-700.avif" srcset="
+    images/asesorImage-372.avif 372w,
+    images/asesorImage-700.avif 700w
+  " sizes="(max-width: 768px) 372px, 
+         (max-width: 1024px) 700px, 
+         412px" class="w-full rounded-xl object-cover" alt="Asesoramiento Laboral" loading="lazy" />
+
             <div class="flex flex-col text-center gap-5 lg:gap-6">
               <h4 class="font-alata font-normal lg:text-4xl text-2xl">
-                Asesoramiento Legal Laboral y Gestión Empresarial
+                Asesoramiento Laboral y Gestión Empresarial
               </h4>
               <p class="font-normal text-base lg:text-lg text-white-950">
                 Brindamos asesoría en sueldos, derechos laborales y
@@ -527,7 +530,14 @@
             </div>
           </article>
           <article class="flex flex-col gap-6 lg:gap-8">
-            <img src="images/gestionImage.avif" class="w-170 h-auto rounded-xl" alt="Gestion de talento" />
+            <img src="images/gestionImage-700.avif" srcset="
+    images/gestionImage-372.avif 372w,
+    images/gestionImage-700.avif 700w
+  " sizes="(max-width: 768px) 372px, 
+         (max-width: 1024px) 700px, 
+         412px" class="w-full rounded-xl object-cover" alt="Gestión de Talento y Clima Organizacional"
+              loading="lazy" />
+
             <div class="flex flex-col text-center gap-5 lg:gap-6">
               <h4 class="font-alata font-normal lg:text-4xl text-2xl">
                 Gestión del Talento y Clima Organizacional
@@ -539,7 +549,12 @@
             </div>
           </article>
           <article class="flex flex-col gap-6 lg:gap-8">
-            <img src="images/planesImage.avif" class="w-170 h-auto rounded-xl" alt="Planes de mejora" />
+            <img src="images/planesImage-700.avif" srcset="
+    images/planesImage-372.avif 372w,
+    images/planesImage-700.avif 700w
+  " sizes="(max-width: 768px) 372px, 
+         (max-width: 1024px) 700px, 
+         412px" class="w-full rounded-xl object-cover" alt="Planes de mejora y seguimiento efectivo" loading="lazy" />
             <div class="flex flex-col text-center gap-5 lg:gap-6">
               <h4 class="font-alata font-normal lg:text-4xl text-2xl">
                 Planes de mejora y seguimiento efectivo
@@ -634,8 +649,12 @@
             </svg>
           </a>
         </div>
-        <img src="images/ctaImage.avif" class="w-170 h-auto object-cover object-center rounded-xl"
-          alt="Llamada a la accion" />
+        <img src="images/ctaImage-700.avif" srcset="
+            images/ctaImage-372.avif 372w,
+            images/ctaImage-700.avif 700w,
+          " sizes="(max-width: 768px) 372px, 
+         (max-width: 1024px) 700px" loading="lazy" class="h-auto w-170 rounded-xl" alt="imagen CTA" />
+
       </div>
     </section>
     <!-- Contacto Section -->
@@ -691,7 +710,6 @@
         </div>
         <form class="flex flex-col gap-6 lg:gap-4 w-full max-w-md" name="contacto" method="POST" data-netlify="true"
           netlify-honeypot="bot-field" action="/gracias.html">
-
           <!-- Campo oculto para detectar bots (anti-spam) -->
           <input type="hidden" name="bot-field" />
 
