@@ -28,8 +28,10 @@
   </noscript>
 
   <!-- 🔹 Preload de la fuente crítica (Alata usada en H1/LCP) -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/alata/v17/PbytFmztEwbIofe6xHU.woff2" as="font" type="font/woff2"
-    crossorigin>
+  <!-- <link rel="preload" href="https://fonts.gstatic.com/s/alata/v17/PbytFmztEwbIofe6xHU.woff2" as="font" type="font/woff2"
+    crossorigin /> -->
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap" rel="stylesheet">
+
 
   <!-- 🔹 Tailwind (output.css optimizado con purge) -->
   <!-- Carga el CSS de Tailwind como crítico (bloqueante normal)+++ -->
@@ -37,7 +39,7 @@
   <link rel="stylesheet" href="src/output.css">
 
   <!-- 🔹 Tailwind Elements (JS diferido para no bloquear render) -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwind-elements/core@1.0.0/dist/js/index.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module" defer></script>
   <script type="module" src="js/script.js" defer></script>
 
   <!-- CSS CRITICO -------------------------->

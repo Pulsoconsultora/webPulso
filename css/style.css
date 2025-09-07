@@ -1,57 +1,52 @@
+/* Cards */
+.service-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen de fondo con transición */
+.service-card img {
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-card:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.02);
+}
+
+/* Botón estilo vidrio */
 .glass-btn {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 .glass-btn:hover {
   background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
+/* Acordeón */
 .accordion-content {
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
+  opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition:
-    max-height 0.3s ease-out,
-    opacity 0.3s ease-out;
-  opacity: 0;
 }
 
-.accordion-content.expanded {
-  max-height: 500px;
+.accordion-content.open {
   opacity: 1;
-}
-
-.service-card-container {
-  transition: all 0.3s ease-out;
-}
-#expandableContent.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent2.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent3.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent4.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent5.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent6.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent7.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent8.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent9.expanded {
-  max-height: 1200px; /* o la altura que necesites */
-}
-#expandableContent10.expanded {
-  max-height: 1200px; /* o la altura que necesites */
+  max-height: 600px; /* ajusta según necesidad */
 }

@@ -1,60 +1,59 @@
-const botonLeer = document.getElementById("boton-leer");
-const contenidoOculto = document.getElementById("contenido-oculto");
+// ========== CONTADOR REGRESIVO ==========
+(function () {
+  let seconds = 5;
+  const countdownElement = document.getElementById("countdown");
 
-botonLeer.addEventListener("click", () => {
-  if (contenidoOculto.classList.contains("hidden")) {
-    contenidoOculto.classList.remove("hidden");
-    botonLeer.textContent = "Leer menos";
-  } else {
-    contenidoOculto.classList.add("hidden");
-    botonLeer.textContent = "Leer más";
-  }
-});
-const botonLeer1 = document.getElementById("boton-leer1");
-const contenidoOculto1 = document.getElementById("contenido-oculto1");
+  if (countdownElement) {
+    const timer = setInterval(() => {
+      seconds--;
+      countdownElement.textContent = seconds;
 
-botonLeer1.addEventListener("click", () => {
-  if (contenidoOculto1.classList.contains("hidden")) {
-    contenidoOculto1.classList.remove("hidden");
-    botonLeer1.textContent = "Leer menos";
-  } else {
-    contenidoOculto1.classList.add("hidden");
-    botonLeer1.textContent = "Leer más";
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "/";
+      }
+    }, 1000);
   }
-});
-const botonLeer2 = document.getElementById("boton-leer2");
-const contenidoOculto2 = document.getElementById("contenido-oculto2");
+})();
 
-botonLeer2.addEventListener("click", () => {
-  if (contenidoOculto2.classList.contains("hidden")) {
-    contenidoOculto2.classList.remove("hidden");
-    botonLeer2.textContent = "Leer menos";
-  } else {
-    contenidoOculto2.classList.add("hidden");
-    botonLeer2.textContent = "Leer más";
-  }
-});
-const botonLeer3 = document.getElementById("boton-leer3");
-const contenidoOculto3 = document.getElementById("contenido-oculto3");
+// ========== BOTONES "LEER MÁS / MENOS" ==========
+(function () {
+  const toggles = [
+    { btn: "boton-leer", content: "contenido-oculto" },
+    { btn: "boton-leer1", content: "contenido-oculto1" },
+    { btn: "boton-leer2", content: "contenido-oculto2" },
+    { btn: "boton-leer3", content: "contenido-oculto3" },
+    { btn: "boton-leer4", content: "contenido-oculto4" },
+  ];
 
-botonLeer3.addEventListener("click", () => {
-  if (contenidoOculto3.classList.contains("hidden")) {
-    contenidoOculto3.classList.remove("hidden");
-    botonLeer3.textContent = "Leer menos";
-  } else {
-    contenidoOculto3.classList.add("hidden");
-    botonLeer3.textContent = "Leer más";
-  }
-});
-const botonLeer4 = document.getElementById("boton-leer4");
-const contenidoOculto4 = document.getElementById("contenido-oculto4");
+  toggles.forEach(({ btn, content }) => {
+    const button = document.getElementById(btn);
+    const target = document.getElementById(content);
 
-botonLeer4.addEventListener("click", () => {
-  if (contenidoOculto4.classList.contains("hidden")) {
-    contenidoOculto4.classList.remove("hidden");
-    botonLeer4.textContent = "Leer menos";
-  } else {
-    contenidoOculto4.classList.add("hidden");
-    botonLeer4.textContent = "Leer más";
+    if (button && target) {
+      button.addEventListener("click", () => {
+        const hidden = target.classList.contains("hidden");
+        target.classList.toggle("hidden");
+        button.textContent = hidden ? "Leer menos" : "Leer más";
+      });
+    }
+  });
+})();
+
+// ========== ACORDEONES "AMPLIAR / CONTRAER" ==========
+(function () {
+  for (let i = 1; i <= 10; i++) {
+    const btn = document.getElementById(`expandBtn${i === 1 ? "" : i}`);
+    const content = document.getElementById(
+      `expandableContent${i === 1 ? "" : i}`
+    );
+    const btnText = document.getElementById(`btnText${i === 1 ? "" : i}`);
+
+    if (btn && content && btnText) {
+      btn.addEventListener("click", () => {
+        const expanded = content.classList.toggle("expanded");
+        btnText.textContent = expanded ? "Contraer" : "Ampliar";
+      });
+    }
   }
-});
+})();

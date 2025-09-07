@@ -28,8 +28,9 @@
   </noscript>
 
   <!-- 🔹 Preload de la fuente crítica (Alata usada en H1/LCP) -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/alata/v17/PbytFmztEwbIofe6xHU.woff2" as="font" type="font/woff2"
-    crossorigin />
+  <!-- <link rel="preload" href="https://fonts.gstatic.com/s/alata/v17/PbytFmztEwbIofe6xHU.woff2" as="font" type="font/woff2"
+    crossorigin /> -->
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- 🔹 Tailwind (output.css optimizado con purge) -->
   <!-- Carga el CSS de Tailwind como crítico (bloqueante normal)+++ -->
@@ -37,7 +38,8 @@
   <link rel="stylesheet" href="src/output.css" />
 
   <!-- 🔹 Tailwind Elements (JS diferido para no bloquear render) -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwind-elements/core@1.0.0/dist/js/index.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module" defer></script>
+
 
   <!-- CSS CRITICO -------------------------->
   <!-- <style>
@@ -286,7 +288,6 @@
     <section id="Inicio" class="relative isolate min-h-[500px] flex items-center justify-center" aria-label="Inicio">
       <img src="images/heroImage-1200.avif" srcset="
             images/heroImage-400.avif   400w,
-            images/heroImage-800.avif   800w,
             images/heroImage-1200.avif 1200w,
             images/heroImage-1600.avif 1600w
           " sizes="(max-width: 768px) 100vw,
@@ -488,9 +489,11 @@
 
         <img src="images/beneImage-600.avif" srcset="
     images/beneImage-372.avif 372w,
+    images/beneImage-400.avif 400w,
     images/beneImage-600.avif 600w
   " sizes="(max-width: 768px) 372px, 600px" class="w-full rounded-xl max-w-170 h-auto object-cover" alt="Beneficios"
           loading="lazy" />
+
 
       </div>
     </section>
@@ -514,6 +517,7 @@
           <article class="flex flex-col gap-6 lg:gap-8">
             <img src="images/asesorImage-700.avif" srcset="
     images/asesorImage-372.avif 372w,
+    images/asesorImage-400.avif 400w,
     images/asesorImage-700.avif 700w
   " sizes="(max-width: 768px) 372px, 
          (max-width: 1024px) 700px, 
